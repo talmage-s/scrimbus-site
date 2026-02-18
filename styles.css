@@ -1,25 +1,13 @@
-/* --------------------------------------------------
-   Rubric: Include CSS comments in your style sheet
-   Student: Your Name
-   Assignment: Unit 04 Intro to CSS
-   -------------------------------------------------- */
-
-/* Rubric: Styling for the body tag */
+/* --- Base Styles (From Unit 04) --- */
 body {
-    /* Rubric: Background color used */
     background-color: #f4f4f9;
-    /* Rubric: Color used (text) */
     color: #333333;
-    /* Rubric: CSS font-family property is present (NOT Oxygen) */
     font-family: 'Open Sans', sans-serif;
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
-/* Rubric: Styling for h1 and h2 tags */
-/* Rubric: At least two different font weights used (600 here vs 400 body) */
-/* Rubric: At least two different font sizes used */
 h1, h2, h3 {
     font-family: 'Poppins', sans-serif;
     color: #2c3e50;
@@ -32,7 +20,7 @@ h1 {
     padding: 20px 0;
     background-color: #ffffff;
     margin: 0;
-    border-bottom: 4px solid #3498db; /* Rubric: Style a border (color, type, thickness) */
+    border-bottom: 4px solid #3498db;
 }
 
 h2 {
@@ -41,123 +29,96 @@ h2 {
     border-bottom: 1px solid #ddd;
 }
 
-/* Rubric: Styling for the paragraph tag */
-p {
-    margin-bottom: 15px;
-    max-width: 800px;
-}
+p { margin-bottom: 15px; max-width: 800px; }
 
-/* --------------------------------------------------
-   NAVIGATION STYLES
-   -------------------------------------------------- */
-
-/* Rubric: Styling for the navigation tag */
-nav {
-    background-color: #2c3e50;
-}
-
+/* --- Navigation --- */
+nav { background-color: #2c3e50; }
 nav ul {
-    list-style-type: none; /* Remove bullets from nav */
+    list-style-type: none;
     margin: 0;
     padding: 0;
-    /* Rubric: Flexbox is used to display menu items horizontally */
     display: flex;
     justify-content: center;
 }
-
-nav li {
-    margin: 0;
-}
-
 nav a {
     display: block;
     color: white;
-    /* Rubric: Default navigation link underline has been removed */
     text-decoration: none;
     padding: 0 30px;
-    
-    /* Rubric: Insure menu items are at least 48 px tall */
-    /* Using line-height or padding+height ensures the touch target is big enough */
     line-height: 48px; 
-    
     font-family: 'Poppins', sans-serif;
-    font-weight: 400;
 }
-
-/* Rubric: CSS includes a hover state for the anchors */
-nav a:hover {
-    background-color: #3498db;
-    color: #ffffff;
-}
-
-/* Rubric: Wayfinding is working (styling the active class) */
+nav a:hover { background-color: #3498db; color: #ffffff; }
 .active {
-    background-color: #1a252f; /* Darker shade to show "You are here" */
+    background-color: #1a252f;
     font-weight: bold;
     border-bottom: 3px solid #3498db;
 }
 
-/* --------------------------------------------------
-   MAIN CONTENT & LISTS
-   -------------------------------------------------- */
-main {
-    padding: 20px;
-    max-width: 960px;
-    margin: 0 auto;
+/* --- Main Content --- */
+main { padding: 20px; max-width: 960px; margin: 0 auto; }
+.principles-list { list-style-type: square; margin-left: 20px; padding: 20px; background-color: #fff; border: 1px solid #ddd; }
+dl { background-color: #e8f4fc; padding: 20px; border-left: 5px solid #3498db; }
+dt { font-weight: bold; color: #2c3e50; margin-top: 10px; }
+.card { background-color: #2c3e50; color: white; padding: 20px; margin-top: 30px; border-radius: 15px; text-align: center; }
+.card h3 { color: #3498db; }
+
+/* ==========================================================
+   NEW UNIT 05 STYLES
+   ========================================================== */
+
+/* Rubric: Image floated right, size set to percentage, height auto */
+.home-image {
+    float: right;
+    width: 40%;
+    height: auto;
+    margin: 0 0 15px 20px; /* Provides spacing between text and image */
+    background-color: #ffffff;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
-/* Rubric: Change the bullet type for a list */
-.principles-list {
-    list-style-type: square; 
-    /* Rubric: Use padding and margin to style the lists */
-    margin-left: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+.home-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.principles-list li {
-    margin-bottom: 10px;
-}
-
-/* Rubric: Style the definition list */
-dl {
-    background-color: #e8f4fc;
-    padding: 20px;
-    border-left: 5px solid #3498db;
-}
-
-dt {
-    font-weight: bold;
-    font-size: 1.1em;
-    color: #2c3e50;
-    margin-top: 10px;
-}
-
-dd {
-    margin-left: 0;
-    margin-bottom: 10px;
-}
-
-/* --------------------------------------------------
-   EXTRAS (Borders & Footer)
-   -------------------------------------------------- */
-
-.card {
-    background-color: #2c3e50;
-    color: white;
-    padding: 20px;
-    margin-top: 30px;
-    /* Rubric: Add a border radius */
-    border-radius: 15px; 
+.home-image figcaption {
     text-align: center;
+    font-style: italic;
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 8px;
 }
 
-.card h3 {
-    color: #3498db;
+/* Rubric: Flexbox Gallery Layout */
+.flex-gallery {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to wrap to the next row */
+    gap: 15px; /* Spacing between grid items */
+    justify-content: center; /* Centers the grid on the page */
+    margin-top: 20px;
 }
 
+.flex-gallery figure {
+    margin: 0;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.flex-gallery img {
+    display: block;
+    max-width: 100%; /* Ensures images don't break out of their containers */
+    height: auto;
+}
+
+/* Rubric: Footer must clear the float */
 footer {
+    clear: both; 
     text-align: center;
     padding: 20px;
     margin-top: 40px;
