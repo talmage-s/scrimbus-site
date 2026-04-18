@@ -1,0 +1,227 @@
+/* ==========================================================
+   BASE STYLES & TYPOGRAPHY
+   ========================================================== */
+body {
+    background-color: #f4f4f4;
+    color: #1a1a1a;
+    font-family: 'IBM Plex Mono', monospace; /* Modern, technical aesthetic */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, header span {
+    font-family: 'Poppins', sans-serif;
+    color: #111;
+    font-weight: 600;
+}
+
+/* ==========================================================
+   HEADER & NAVIGATION
+   ========================================================== */
+header {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    border-bottom: 4px solid #d94a38; /* Strong accent color */
+}
+
+header span {
+    font-size: 2.5rem;
+    display: block;
+}
+
+header p { margin: 10px 0 0 0; color: #555; }
+
+nav { background-color: #1a1a1a; }
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 0 30px;
+    line-height: 48px; 
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+nav a:hover { background-color: #d94a38; }
+.active {
+    background-color: #333;
+    border-bottom: 3px solid #d94a38;
+}
+
+/* ==========================================================
+   MAIN CONTENT & LISTS
+   ========================================================== */
+main { padding: 40px 20px; max-width: 960px; margin: 0 auto; }
+h1 { border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-bottom: 20px; }
+h2 { margin-top: 40px; }
+p { margin-bottom: 20px; max-width: 800px; }
+
+dl { background-color: #fff; padding: 20px; border-left: 5px solid #d94a38; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+dt { font-weight: bold; font-family: 'Poppins', sans-serif; margin-top: 15px; font-size: 1.1rem; }
+dt:first-child { margin-top: 0; }
+dd { margin-left: 0; margin-bottom: 10px; color: #555; }
+
+ul { margin-bottom: 20px; padding-left: 20px; }
+li { margin-bottom: 8px; }
+
+/* ==========================================================
+   IMAGES & GALLERY (UNIT 05)
+   ========================================================== */
+.home-image {
+    float: right;
+    width: 40%;
+    height: auto;
+    margin: 0 0 20px 30px;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-sizing: border-box;
+}
+
+.home-image img { width: 100%; height: auto; display: block; }
+.home-image figcaption { text-align: center; font-size: 0.8rem; color: #666; margin-top: 10px; font-style: italic; }
+
+.flex-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.flex-gallery figure {
+    margin: 0;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.flex-gallery figure:hover { transform: translateY(-5px); }
+.flex-gallery img { display: block; max-width: 100%; height: auto; }
+.flex-gallery figcaption { text-align: center; margin-top: 10px; font-family: 'Poppins', sans-serif; font-size: 0.85rem; font-weight: 600; }
+
+/* ==========================================================
+   FORMS (UNIT 06)
+   ========================================================== */
+.inquiry-form {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: left; /* Rubric: Straight line eye tracking */
+}
+
+fieldset {
+    border: 2px solid #ccc;
+    border-radius: 8px; /* Rubric: Round corners */
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #fcfcfc;
+}
+
+legend {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #d94a38;
+    background-color: #f4f4f4;
+    padding: 0 15px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+.block-label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #1a1a1a;
+}
+
+.instruction-text {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+}
+
+/* Rubric: Styled inputs, rounded corners, matching borders */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 12px;
+    margin-top: 8px;
+    border: 1px solid #aaa;
+    border-radius: 6px; 
+    background-color: #ffffff; 
+    color: #1a1a1a; 
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #d94a38;
+    box-shadow: 0 0 5px rgba(217, 74, 56, 0.3);
+}
+
+.radio-label, .check-label {
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.radio-label input, .check-label input {
+    margin-right: 10px;
+}
+
+/* Rubric: Styled Submit Button */
+.submit-btn {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #d94a38; 
+    color: #ffffff;
+    padding: 15px 20px; 
+    border: 2px solid #b33929; 
+    border-radius: 8px; 
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover { background-color: #b33929; }
+
+/* ==========================================================
+   FOOTER
+   ========================================================== */
+footer {
+    clear: both; 
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    background-color: #1a1a1a;
+    color: #999;
+    font-size: 0.85rem;
+}
+footer a { color: #d94a38; text-decoration: none; }
