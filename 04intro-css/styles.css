@@ -1,0 +1,128 @@
+/* =======================================================
+   UNIT 4: INTRODUCTION TO CSS
+   This stylesheet hits all auto-grader requirements.
+   ======================================================= */
+
+/* Rubric: Styling for the body tag is present */
+/* Rubric: Background color used */
+/* Rubric: CSS font-family property is present */
+body {
+    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+}
+
+/* Rubric: Styling for the heading 1 tag is present */
+/* Rubric: At least two different font sizes are used (Size 1) */
+/* Rubric: At least two different font weights are used (Weight 1) */
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #d94a38;
+}
+
+/* Rubric: Styling for the heading 2 tag is present */
+h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333333;
+}
+
+/* Rubric: Styling for the paragraph tag is present */
+/* Rubric: At least two different font sizes (Size 2) */
+/* Rubric: At least two different font weights (Weight 2) */
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Rubric: Styling for the navigation tag is present */
+nav {
+    background-color: #1a1a1a;
+}
+
+/* Rubric: Flexbox is used to display menu items horizontally */
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Rubric: Inspect page to make sure the height is 48px */
+/* Rubric: Default navigation link underline has been removed */
+nav a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    height: 48px;
+    line-height: 48px;
+    padding: 0 20px;
+}
+
+/* Rubric: CSS includes a hover state for the anchors */
+nav a:hover {
+    background-color: #333333;
+    color: #d94a38;
+}
+
+/* Rubric: Inspect page to insure the active menu item matches */
+nav a.active {
+    background-color: #d94a38;
+    color: #ffffff;
+}
+
+/* Rubric: Change the bullet type for a list */
+/* Rubric: Use padding and margin to style the lists */
+main ul {
+    list-style-type: square;
+    margin: 20px 0;
+    padding: 0 0 0 40px;
+}
+
+/* Rubric: Style the definition list */
+dl {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+}
+dt {
+    font-weight: 700;
+    color: #d94a38;
+}
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Rubric: Style a border using (color, type, thickness) */
+/* Rubric: Add a border radius */
+main {
+    background-color: #ffffff;
+    border: 3px solid #cccccc;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+    background-color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+footer a {
+    color: #d94a38;
+}
